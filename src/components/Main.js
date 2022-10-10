@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import './Main.css'
+
+//Form
+import { FaPaperPlane } from 'react-icons/fa'
+
+import './Main.css';
 
 export default class Main extends Component {
   state = {
@@ -13,15 +17,17 @@ export default class Main extends Component {
   }
 
   render() {
-    // const { newTask } = this.state;
+    const { newTask } = this.state;
 
     return (
       <div className='main'>
         <h1>Tasks List</h1>
 
-        <form action="#">
-          <input onChange={this.handleChange}type="text" />
-          <button type='submit'>Send</button>
+        <form action="#" className='form'>
+          <input onChange={this.handleChange}type="text" value={newTask}/>
+          <button type='submit'>
+            <FaPaperPlane/>
+          </button>
         </form>
       </div>
     )

@@ -1,0 +1,48 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.main {
+  background: #fff;
+  padding: 3rem;
+  margin: 5rem auto;
+  max-width: 60rem;
+  border-radius: 0.4rem;
+  box-shadow:  0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.main h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.form {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input[type="text"] {
+  height: 3rem;
+  padding: 0 2rem;
+  font-size: 2rem;
+  border: 1px solid #ccc;
+  min-width: 80%;
+}
+
+.form button[type="submit"] {
+  border: none;
+  height: 3rem;
+  width: 4rem;
+  background: #f04c64;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
