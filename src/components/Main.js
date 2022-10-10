@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
-//Form
-import { FaPaperPlane } from 'react-icons/fa'
-
-//Tasks
-// eslint-disable-next-line no-unused-vars
-import { FaEdit, FaWindowClose } from 'react-icons/fa'
+import Form from './Form';
+import Tasks from './Tasks'
 
 import './Main.css';
 
@@ -90,24 +86,17 @@ export default class Main extends Component {
       <div className='main'>
         <h1>Tasks List</h1>
 
-        <form onSubmit={this.handleSubmit} action="#" className='form'>
-          <input onChange={this.handleChange}type="text" value={newTask}/>
-          <button type='submit'>
-            <FaPaperPlane/>
-          </button>
-        </form>
+        <Form
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
+        newTask={newTask}
+        />
 
-        <ul className='tasks'>
-          {tasks.map((task, index) => (
-            <li key={task}>
-              {task}
-              <span>
-                  <FaEdit onClick={(e) => this.handleEdit(e, index)} className='edit'/>
-                  <FaWindowClose onClick={(e) => this.handleDelete( e, index)} className='delete'/>
-              </span>
-            </li>
-          ))}
-        </ul>
+        <Tasks
+        handleDelete={this.handleDelete}
+        handleEdit={this.handleEdit}
+        tasks={tasks}
+        />
 
       </div>
     )
